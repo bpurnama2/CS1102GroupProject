@@ -1,38 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CS1102 Group Project</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS1102 Group Project</title>
     <style>
-        table {border: 1px solid black;}
-        th {border: 1px solid black;}
-        span {font-weight: bold;}
-    </style>   
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        h3 {
+            margin-top: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        li:hover {
+            transform: scale(1.02);
+            background: #f1f1f1;
+        }
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+        span {
+            font-weight: bold;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-    <h1>CS1102 - Course Project - 2024/2025 Semester B</h1>
-    <hr></hr>
-    <table>
-            <tr>
-                <th>Group Member</th>
-                <th>Student ID</th>
-            </tr>
-            <tr>
-                <td>HUANG Chia-Cheng</td>
-                <td>57288548</td>
-            </tr>
-            <tr>
-                <td>PURNAMA Bryan</td>
-                <td>58023730</td>
-            </tr>
-            <tr>
-                <td>WU Honghua</td>
-                <td>58093859</td>
-            </tr>
-            <tr>
-                <td>YAN Chu Wing</td>
-                <td>58527851</td>
-            </tr>
-        </table>
+    <header>
+        <h1>CS1102 - Course Project - 2024/2025 Semester B</h1>
+    </header>
+    <div class="container">
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Group Member</th>
+                    <th>Student ID</th>
+                </tr>
+                <tr>
+                    <td>HUANG Chia-Cheng</td>
+                    <td>57288548</td>
+                </tr>
+                <tr>
+                    <td>PURNAMA Bryan</td>
+                    <td>58023730</td>
+                </tr>
+                <tr>
+                    <td>WU Honghua</td>
+                    <td>58093859</td>
+                </tr>
+                <tr>
+                    <td>YAN Chu Wing</td>
+                    <td>58527851</td>
+                </tr>
+            </table>
+        </div>
         <h3>Project Topic: Threat and Solutions for Internet Security in e-Banking</h3>
         <span>Techniques that has demonstrated:</span>
         <ul>
@@ -41,17 +121,29 @@
             <li>techniques 3</li>
             <li>techniques 4</li>
         </ul>
-        <span>Types of e-banking security treats:</span>
+        <span>Types of e-banking security threats:</span>
         <ul>
-            <li><a href="./treats/phising.html">Phising treats</a></li>
-            <li><a href="./treats/malware.html">Malware treats</a></li>
-            <li><a href="./treats/maninthemiddle.html">Man-in-the-middle attacks</a></li>
+            <li class="fade-in"><a href="./treats/phising.html">Phishing threats</a></li>
+            <li class="fade-in"><a href="./treats/malware.html">Malware threats</a></li>
+            <li class="fade-in"><a href="./treats/maninthemiddle.html">Man-in-the-middle attacks</a></li>
         </ul>
-        <span>Solution for facing the treats in e-banking:</span>
+        <span>Solution for facing the threats in e-banking:</span>
         <ul>
-            <li><a href="./solution/multiauth.html">Multi-factor authentication</a></li>
-            <li><a href="./solution/dataencryp.html">Data encryption</a></li>
-            <li><a href="./solution/aifraud.html">AI-based fraud detection</a></li>
+            <li class="fade-in"><a href="./solution/multiauth.html">Multi-factor authentication</a></li>
+            <li class="fade-in"><a href="./solution/dataencryp.html">Data encryption</a></li>
+            <li class="fade-in"><a href="./solution/aifraud.html">AI-based fraud detection</a></li>
         </ul>
+    </div>
+    <script>
+        document.addEventListener("scroll", function() {
+            const fadeElements = document.querySelectorAll(".fade-in");
+            fadeElements.forEach(function(element) {
+                const position = element.getBoundingClientRect();
+                if (position.top < window.innerHeight && position.bottom >= 0) {
+                    element.classList.add("visible");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
