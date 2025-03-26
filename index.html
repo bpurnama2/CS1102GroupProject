@@ -1,139 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS1102 Group Project</title>
+    <title>CS1102 Group Project</title> 
     <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9fafb;
-            color: #333;
-            overflow-x: hidden;
-        }
-
-        h1 {
-            text-align: center;
-            color: #1a202c;
-            margin-bottom: 10px;
-            margin-top: 30px;
-            font-size: 2.5rem;
-        }
-
-        h3 {
-            text-align: center;
-            color: #1a202c;
-            margin-bottom: 10px;
-            margin-top: 40px;
-            font-size: 1.5rem;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: #1a202c;
-            margin: 20px auto;
-            width: 60%;
-        }
-
-        /* Table Styles */
-        table {
-            width: 90%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        th {
-            background-color: #1a202c;
-            color: #ffffff;
-            font-weight: bold;
-        }
-
-        tr:hover {
-            background-color: #edf2f7;
-        }
-
-        /* List Styles */
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 20px auto;
-            width: 90%;
-            max-width: 600px;
-        }
-
-        ul li {
-            background: #ffffff;
-            padding: 15px;
-            margin: 10px 0;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        ul li:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        ul li a {
-            text-decoration: none;
-            color: #1a202c;
-            font-weight: bold;
-            display: block;
-        }
-
-        ul li a:hover {
-            color: #3182ce;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #1a202c;
-            color: #ffffff;
-        }
-
-        /* Fade-in Animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+        table {border: 1px solid black;}
+        th {border: 1px solid black;}
+        span {font-weight: bold;}
+    </style>   
 </head>
 <body>
-    <h1 class="fade-in">CS1102 - Course Project - 2024/2025 Semester B</h1>
-    <hr class="fade-in">
-    <table class="fade-in">
-        <thead>
+    <h1>CS1102 - Course Project - 2024/2025 Semester B</h1>
+    <hr></hr>
+    <table>
             <tr>
                 <th>Group Member</th>
                 <th>Student ID</th>
             </tr>
-        </thead>
-        <tbody>
             <tr>
                 <td>HUANG Chia-Cheng</td>
                 <td>57288548</td>
@@ -150,54 +32,26 @@
                 <td>YAN Chu Wing</td>
                 <td>58527851</td>
             </tr>
-        </tbody>
-    </table>
-    
-    <h3 class="fade-in">Project Topic: Threat and Solutions for Internet Security in e-Banking</h3>
-
-    <span class="fade-in" style="display: block; text-align: center; font-weight: bold; margin-top: 20px;">Techniques Demonstrated:</span>
-    <ul class="fade-in">
-        <li>Techniques 1</li>
-        <li>Techniques 2</li>
-        <li>Techniques 3</li>
-        <li>Techniques 4</li>
-    </ul>
-    
-    <span class="fade-in" style="display: block; text-align: center; font-weight: bold; margin-top: 20px;">Types of E-Banking Security Threats:</span>
-    <ul class="fade-in">
-        <li><a href="./treats/phising.html">Phishing Threats</a></li>
-        <li><a href="./treats/malware.html">Malware Threats</a></li>
-        <li><a href="./treats/maninthemiddle.html">Man-in-the-Middle Attacks</a></li>
-    </ul>
-    
-    <span class="fade-in" style="display: block; text-align: center; font-weight: bold; margin-top: 20px;">Solutions for E-Banking Security Threats:</span>
-    <ul class="fade-in">
-        <li><a href="./solution/multiauth.html">Multi-Factor Authentication</a></li>
-        <li><a href="./solution/dataencryp.html">Data Encryption</a></li>
-        <li><a href="./solution/aifraud.html">AI-Based Fraud Detection</a></li>
-    </ul>
-    
-    <footer>
-        &copy; 2024/2025 CS1102 Course Project
-    </footer>
-
-    <script>
-        // Scroll effect: fade-in animation
-        const fadeElements = document.querySelectorAll('.fade-in');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1,
-        });
-
-        fadeElements.forEach(element => {
-            observer.observe(element);
-        });
-    </script>
+        </table>
+        <h3>Project Topic: Threat and Solutions for Internet Security in e-Banking</h3>
+        <span>Techniques that has demonstrated:</span>
+        <ul>
+            <li>techniques 1</li>
+            <li>techniques 2</li>
+            <li>techniques 3</li>
+            <li>techniques 4</li>
+        </ul>
+        <span>Types of e-banking security treats:</span>
+        <ul>
+            <li><a href="./treats/phising.html">Phising treats</a></li>
+            <li><a href="./treats/malware.html">Malware treats</a></li>
+            <li><a href="./treats/maninthemiddle.html">Man-in-the-middle attacks</a></li>
+        </ul>
+        <span>Solution for facing the treats in e-banking:</span>
+        <ul>
+            <li><a href="./solution/multiauth.html">Multi-factor authentication</a></li>
+            <li><a href="./solution/dataencryp.html">Data encryption</a></li>
+            <li><a href="./solution/aifraud.html">AI-based fraud detection</a></li>
+        </ul>
 </body>
 </html>
